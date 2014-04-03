@@ -1,8 +1,8 @@
 Description:
-    Creates a newsimple website
+    Creates a new simple website
 
 Example:
-    yo webapp [--coffee]
+    yo simple-website [--coffee]
 
     This will create:
         Gruntfile.js: Configuration for the task runner.
@@ -10,4 +10,3 @@ Example:
         package.json: Development packages installed by npm.
 
         app/: Your application files.
-        test/: Unit tests for your application.
