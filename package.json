@@ -1,17 +1,14 @@
 {
-  "name": "generator-webapp",
-  "version": "0.4.8",
-  "description": "Scaffold out a front-end web app",
+  "name": "generator-simple-website",
+  "version": "0.0.1",
+  "description": "Scaffold out a simple website",
   "license": "BSD",
-  "repository": "yeoman/generator-webapp",
-  "author": "The Yeoman Team",
+  "repository": "simple-website/generator-simple-website",
+  "author": "Ivo Benner",
   "main": "app/index.js",
   "engines": {
     "node": ">=0.10.0",
     "npm": ">=1.2.10"
-  },
-  "scripts": {
-    "test": "mocha --reporter spec"
   },
   "files": [
     "app"

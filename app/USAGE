@@ -1,8 +1,5 @@
 Description:
-    Creates a new basic front-end web application.
-
-Options:
-    Bootstrap: Include Bootstrap for Sass
+    Creates a newsimple website
 
 Example:
     yo webapp [--coffee]

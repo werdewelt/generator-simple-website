@@ -5,7 +5,6 @@ var spawn = require('child_process').spawn;
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 
-
 var AppGenerator = module.exports = function Appgenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
 
@@ -37,6 +36,7 @@ util.inherits(AppGenerator, yeoman.generators.Base);
 AppGenerator.prototype.askFor = function askFor() {
   var cb = this.async();
 
+  console.log("test");
   // welcome message
   if (!this.options['skip-welcome-message']) {
     console.log(this.yeoman);
@@ -48,16 +48,16 @@ AppGenerator.prototype.askFor = function askFor() {
     name: 'features',
     message: 'What more would you like?',
     choices: [{
-      name: 'Bootstrap',
-      value: 'includeBootstrap',
-      checked: true
-    },{
       name: 'Sass',
       value: 'includeSass',
-      checked: false
+      checked: true
     },{
       name: 'Modernizr',
       value: 'includeModernizr',
+      checked: false
+    },{
+      name: 'Bootstrap',
+      value: 'includeBootstrap',
       checked: false
     }]
   }, {
@@ -67,7 +67,7 @@ AppGenerator.prototype.askFor = function askFor() {
     type: 'confirm',
     name: 'libsass',
     value: 'includeLibSass',
-    message: 'Would you like to use libsass? Read up more at \n' + chalk.green('https://github.com/yeoman/generator-webapp/blob/master/libsass.md'),
+    message: 'Would you like to use libsass? Read up more at \n' + chalk.green('https://github.com/werdewelt/generator-simple-website/blob/master/libsass.md'),
     default: false
   }];
 
@@ -89,6 +89,7 @@ AppGenerator.prototype.askFor = function askFor() {
 };
 
 AppGenerator.prototype.gruntfile = function gruntfile() {
+  console.log("Gruntfile");
   this.template('Gruntfile.js');
 };
 
@@ -116,13 +117,10 @@ AppGenerator.prototype.editorConfig = function editorConfig() {
 
 AppGenerator.prototype.h5bp = function h5bp() {
   this.copy('favicon.ico', 'app/favicon.ico');
-  this.copy('404.html', 'app/404.html');
-  this.copy('robots.txt', 'app/robots.txt');
-  this.copy('htaccess', 'app/.htaccess');
 };
 
 AppGenerator.prototype.mainStylesheet = function mainStylesheet() {
-  var css = 'main.' + (this.includeSass ? 's' : '') + 'css';
+  var css = 'main.' + (this.includeSass ? 'sass' : 'css');
   this.copy(css, 'app/styles/' + css);
 };
 
