@@ -1,4 +1,4 @@
-# Simple Website generator [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+# Simple Website Generator [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 A modification and simplification of the official [https://github.com/yeoman/generator-webapp](Webapp generator)
 
